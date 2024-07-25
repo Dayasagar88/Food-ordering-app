@@ -1,0 +1,48 @@
+#step-1
+push the code github
+
+#step-2
+Install NPM
+command ==> npn init (we can use npm init -y but it will skip the some the packages)
+it will install the package.json file
+
+#step-3
+install parcel
+command ==> npm install -D parcel(it will install parcel as dev dependencies)
+it will install the package.lock.json and node-modules folder
+
+#step-4
+Run command ==> npx parcel index.html
+it will host the project localhost1234(server) and It will generate the devlopment build of your project
+
+#step-5
+Add scripts in package.json file ==> "start": "parcel index.html",
+                                     "build": "parcel index.html",
+It will aloow you to run project using start and build keyword in terminal.   
+
+#step-6
+React router:-
+command ==> npm install react-router-dom
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+
+#Redux Steps
+1. install reduxjs/toolkit and react-redux
+2. create store in utils
+3. configure store => import { configureStore } from "@reduxjs/toolkit";
+4. import store to app => import {Provider} from react-redux;
+5. Wrap up the <app> in <Provider store={your_store_name}>
+
+
+#Steps to install testing library
+1.  install react testing library
+2.  install jest library
+3.  install babel dependency
+4.  create babel.config.js file and Module file(configure babel)
+5.  create .parcelrc file and configure parcel config file to disable the default babel transpilatiion
+6.  jest configration
+7.  install jsdom library if using jest version above 28
+8.  install @babel/preset-react - to make JSX work in test cases
+9.  Include @babel/preset-react inside my babel config
+10. Install @testing-library/jest-dom 
+

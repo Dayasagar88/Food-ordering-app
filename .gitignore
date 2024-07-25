@@ -1,0 +1,8 @@
+/node_modules
+/dist
+.parcel-cache
+.vscode
+/coverage
+src/Components/__tests__
+src/Components/Mocks
+__mocks__
