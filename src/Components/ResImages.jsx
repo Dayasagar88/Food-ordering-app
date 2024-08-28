@@ -1,23 +1,22 @@
 const ResImage = ({ imageUrls, firstImage }) => {
     return (
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <div className="grid grid-cols-3 grid-rows-2 gap-4 ">
         {imageUrls?.map((url, index) => (
-          <div key={index} className={index === 0 ? "col-span-2 row-span-2" : ""}>
+          <div key={index} className={`${index === 0 ? "" : ""} h-[5rem]`}>
             {index === 0 ? (
               <img
                 src={firstImage}
                 alt="First Image"
                 width={600}
                 height={300}
-                className="object-cover w-full h-[315px] rounded-lg"
+                className="object-cover  h-full rounded-lg col-span-5 row-span-2"
               />
             ) : (
               <img
                 src={url}
                 alt={`Image ${index + 1}`}
-                width={200}
-                height={150}
-                className="object-cover w-full h-[150px] rounded-lg"
+                
+                className="object-cover w-full h-full rounded-lg"
               />
             )}
           </div>

@@ -15,6 +15,7 @@ const cartSlice = createSlice({
       // console.log(index)
       if (index > -1) {
         state.items.splice(index, 1);
+        
       }
     },
     clearCart: (state) => {

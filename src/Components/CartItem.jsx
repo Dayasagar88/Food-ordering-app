@@ -4,23 +4,24 @@ import { addItem, removeItem } from "../Utils/CartSlice";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-function CartItem({ item }) {
+const CartItem = ({ item }) => {
   const cartItems = useSelector((store) => store.cart.items);
   const dispatch = useDispatch();
-
+  // console.log(cartItems)
+  
   const handleAddItem = (item) => {
     dispatch(addItem(item));
   };
   const handleRemoveItem = (item) => {
     dispatch(removeItem(item));
   };
-
+  
   const filteredCartItems = cartItems.filter(
     (items) => items?.card?.info?.name === item?.card?.info?.name
   );
-//   console.log(filteredCartItems);
-
+    // console.log(filteredCartItems.length);
   const [qty, setQty] = useState(filteredCartItems.length);
+
   return (
     <div className="grid grid-cols-4 gap-28  px-2  border-b-[2px] border-gray-300">
       <img
@@ -40,7 +41,9 @@ function CartItem({ item }) {
           onClick={() => {
             if (qty >= 1) {
               handleRemoveItem(item);
+              if(qty > 1){
               setQty(qty - 1);
+              }
             }
           }}
           className="border-r px-[8px] border-gray-400"

@@ -56,7 +56,7 @@ const RestaurantMenu = () => {
     resDetails[resId - 1]?.data; 
 
   return (
-    <div className="restaurant-menu-container mt-16 mx-auto">
+    <div className="restaurant-menu-container mt-16 mx-auto sm:w-[50vw] w-[95vw]">
       <div className="resDetails">
         {/* <img className="resImage" src={image} alt="" /> */}
         <ResImage imageUrls={imageUrls} firstImage={image}/>

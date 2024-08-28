@@ -312,7 +312,7 @@ body {
 }
 
 .restaurant-menu-container {
-  max-width: 50vw;
+  /* max-width: 50vw; */
   /* margin: auto; */
 }
 
@@ -667,9 +667,9 @@ body {
   }
   .refreshBtn {
     position: absolute;
-    top: 347px;
+    top: 380px;
     min-width: 150px;
-    min-height: 45px;
+    min-height: 47px;
     border: none;
     background: #035a5df5;
     color: white;
